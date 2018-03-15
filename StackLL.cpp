@@ -1,7 +1,9 @@
 #include "StackLL.h"
 
+#include <iostream>
+
 using namespace std;
-class Node(){
+class Stack::Node{
    public:
       int data = 0;
       Node* next = nullptr;
@@ -19,6 +21,7 @@ void Stack::push(int k){
    Node* iPtr = new Node{k};
    iPtr->next = frontPtr;
    frontPtr = iPtr;  
+   num_elements++;
 }
 
 void Stack::pop(){
@@ -28,7 +31,7 @@ void Stack::pop(){
    num_elements--;
 }
 
-int stack::top(){
+int Stack::top(){
    return frontPtr->data;
 }
 

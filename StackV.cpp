@@ -1,4 +1,6 @@
 #include "StackV.h"
+#include <vector>
+#include <iostream>
 
 using namespace std;
 
@@ -11,14 +13,14 @@ void Stack::push(int k){
 }
 
 void Stack::pop(){
-  data.erase(data.size()-1);
+  data.pop_back();
 }
 
 int Stack::top(){
-  return data[data.size()-1);
+  return data[data.size()-1];
 }
 
 void Stack::clear(){
-   if (vector.size()>0)
-      vector.erase(0,data.size-1);
+   while (data.size()>0)
+      data.pop_back();
 }
